@@ -12,9 +12,9 @@ using MySql.Data.MySqlClient;
 
 namespace IS1_20_ZakirovDK
 {
-    public partial class Form2 : MetroForm
+    public partial class Auth2 : MetroForm
     {
-        string connStr = "server=caseum.ru;port=33333;user=test_user;database=db_test;password=test_pass;";
+        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
         //Переменная соединения
         MySqlConnection conn;
         //Логин и пароль к данной форме Вы сможете посмотреть в БД db_test таблице t_user
@@ -56,13 +56,14 @@ namespace IS1_20_ZakirovDK
             // закрываем соединение с БД
             conn.Close();
         }
-        public Form2()
+        public Auth2()
         {
             InitializeComponent();
         }
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
-            this.Close();
+            //Инициализируем соединение с подходящей строкой
+            conn = new MySqlConnection(connStr);
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
@@ -104,21 +105,14 @@ namespace IS1_20_ZakirovDK
                 MessageBox.Show("Неверные данные авторизации!");
             }
         }
-
-        private void Form2_auth2_Load(object sender, EventArgs e)
-        {
-            //Инициализируем соединение с подходящей строкой
-            conn = new MySqlConnection(connStr);
-        }
-        private void Form2_auth3_Load(object sender, EventArgs e)
-        {
-            //Инициализируем соединение с подходящей строкой
-            conn = new MySqlConnection(connStr);
-        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             //В текстбокс3 формируется хэш по мере ввода текста во второй текстбокс, используется метод шифрования (хэширования)
             metroTextBox3.Text = sha256(metroTextBox2.Text);
+        }
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

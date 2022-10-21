@@ -12,56 +12,85 @@ using MetroFramework.Forms;
 
 namespace IS1_20_ZakirovDK
 {
-    public partial class Form1 : MetroForm
+    public partial class Auth1 : MetroForm
     {
-        public Form1()
+        public Auth1()
         {
             InitializeComponent();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn;
 
-            // строка подключения к БД
-            string connStr = "server=chuc.caseum.ru/phpmyadmin;port=44444;user=st_1_20_14;" +
-                "database=is_1_20_st14_KURS;password=45850148;";
-            // создаём объект для подключения к БД
-
-            conn = new MySqlConnection(connStr);
-
-            // устанавливаем соединение с БД
-            conn.Open();
-            // запрос
-            string sql = $"SELECT fio FROM employees WHERE id_employee=2";
-            // объект для выполнения SQL-запроса
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            // выполняем запрос и получаем ответ
-            string name = command.ExecuteScalar().ToString();
-            // выводим ответ в TextBox
-            metroLabel1.Text = name;
-            // закрываем соединение с БД
-            conn.Close();
+        }
+        public void ManagerRole(int role)
+        {
+            switch (role)
+            {
+                //И в зависимости от того, какая роль (цифра) хранится в поле класса и передана в метод, показываются те или иные кнопки.
+                //Вы можете скрыть их и не отображать вообще, здесь они просто выключены
+                case 1:
+                    metroLabel1.Text = "Максимальный";
+                    metroLabel1.ForeColor = Color.Green;
+                    metroButton1.Enabled = true;
+                    metroButton2.Enabled = true;
+                    metroButton3.Enabled = true;
+                    break;
+                case 2:
+                    metroLabel1.Text = "Умеренный";
+                    metroLabel1.ForeColor = Color.YellowGreen;
+                    metroButton1.Enabled = false;
+                    metroButton2.Enabled = true;
+                    metroButton3.Enabled = true;
+                    break;
+                case 3:
+                    metroLabel1.Text = "Минимальный";
+                    metroLabel1.ForeColor = Color.Yellow;
+                    metroButton1.Enabled = false;
+                    metroButton2.Enabled = false;
+                    metroButton3.Enabled = true;
+                    break;
+                //Если по какой то причине в классе ничего не содержится, то всё отключается вообще
+                default:
+                    metroLabel1.Text = "Неопределённый";
+                    metroLabel1.ForeColor = Color.Red;
+                    metroButton1.Enabled = false;
+                    metroButton2.Enabled = false;
+                    metroButton3.Enabled = false;
+                    break;
+            }
         }
         private void Form1_auth1_Load(object sender, EventArgs e)
         {
             //Сокрытие текущей формы
             this.Hide();
             //Инициализируем и вызываем форму диалога авторизации
-            Form2 form17_Auth2 = new Form2();
+            Auth2 auth2 = new Auth2();
             //Вызов формы в режиме диалога
-            form17_Auth2.ShowDialog();
+            auth2.ShowDialog();
             //Если авторизации была успешна и в поле класса хранится истина, то делаем движуху:
             if (Auth.auth)
             {
                 //Отображаем рабочую форму
                 this.Show();
+                //Вытаскиваем из класса поля в label'ы
+                metroLabel2.Text = Auth.auth_id;
+                metroLabel3.Text = Auth.auth_fio;
+                metroLabel4.Text = "Успешна!";
+                //Красим текст в Label в зелёный цвет
+                metroLabel4.ForeColor = Color.Green;
+                //Вызываем метод управления ролями
+                ManagerRole(Auth.auth_role);
             }
             //иначе
             else
             {
-                //Закрываем форму
-                this.Close();
+                this.Show();
+                metroLabel2.Text = "неизвестный пользователь";
+                metroLabel3.Text = "Отсутствует информация о пользователе";
+                metroLabel4.Text = "Тебе сдесь не рады!";
+                metroLabel4.ForeColor = Color.Red;
+                ManagerRole(Auth.auth_role);
             }
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 namespace IS1_20_ZakirovDK
 {
-    partial class Form2
+    partial class Auth2
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@ namespace IS1_20_ZakirovDK
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(150, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -50,8 +50,7 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
-        "metroTextBox1"};
+            this.metroTextBox1.Lines = new string[0];
             this.metroTextBox1.Location = new System.Drawing.Point(23, 63);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -63,7 +62,6 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox1.ShortcutsEnabled = true;
             this.metroTextBox1.Size = new System.Drawing.Size(172, 23);
             this.metroTextBox1.TabIndex = 0;
-            this.metroTextBox1.Text = "metroTextBox1";
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -100,8 +98,7 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[] {
-        "metroTextBox2"};
+            this.metroTextBox2.Lines = new string[0];
             this.metroTextBox2.Location = new System.Drawing.Point(23, 92);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
@@ -113,7 +110,6 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox2.ShortcutsEnabled = true;
             this.metroTextBox2.Size = new System.Drawing.Size(172, 23);
             this.metroTextBox2.TabIndex = 3;
-            this.metroTextBox2.Text = "metroTextBox2";
             this.metroTextBox2.UseSelectable = true;
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -132,9 +128,8 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox3.CustomButton.UseSelectable = true;
             this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[] {
-        "metroTextBox3"};
-            this.metroTextBox3.Location = new System.Drawing.Point(605, 404);
+            this.metroTextBox3.Lines = new string[0];
+            this.metroTextBox3.Location = new System.Drawing.Point(23, 151);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -145,7 +140,6 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox3.ShortcutsEnabled = true;
             this.metroTextBox3.Size = new System.Drawing.Size(172, 23);
             this.metroTextBox3.TabIndex = 4;
-            this.metroTextBox3.Text = "metroTextBox3";
             this.metroTextBox3.UseSelectable = true;
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -154,7 +148,7 @@ namespace IS1_20_ZakirovDK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(220, 199);
             this.Controls.Add(this.metroTextBox3);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroButton2);
