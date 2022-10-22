@@ -14,7 +14,6 @@ namespace IS1_20_ZakirovDK
 {
     public partial class Auth2 : MetroForm
     {
-        //10.90.12.110
         string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
         //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
         //Переменная соединения
