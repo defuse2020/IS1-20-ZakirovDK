@@ -72,8 +72,9 @@ namespace IS1_20_ZakirovDK
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.Text = "Войти";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroButton2
             // 
@@ -81,8 +82,9 @@ namespace IS1_20_ZakirovDK
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 2;
-            this.metroButton2.Text = "metroButton2";
+            this.metroButton2.Text = "Отмена";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroTextBox2
             // 
@@ -144,7 +146,7 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // Form2
+            // Auth2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,8 +156,9 @@ namespace IS1_20_ZakirovDK
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroTextBox1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "Auth2";
+            this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }

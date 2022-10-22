@@ -14,7 +14,9 @@ namespace IS1_20_ZakirovDK
 {
     public partial class Auth2 : MetroForm
     {
-        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+        //10.90.12.110
+        string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+        //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
         //Переменная соединения
         MySqlConnection conn;
         //Логин и пароль к данной форме Вы сможете посмотреть в БД db_test таблице t_user
@@ -39,7 +41,7 @@ namespace IS1_20_ZakirovDK
             // устанавливаем соединение с БД
             conn.Open();
             // запрос
-            string sql = $"SELECT * FROM t_user WHERE loginUser='{login_user}'";
+            string sql = $"SELECT * FROM employees WHERE login='{login_user}'";
             // объект для выполнения SQL-запроса
             MySqlCommand command = new MySqlCommand(sql, conn);
             // объект для чтения ответа сервера
@@ -50,7 +52,6 @@ namespace IS1_20_ZakirovDK
                 // элементы массива [] - это значения столбцов из запроса SELECT
                 Auth.auth_id = reader[0].ToString();
                 Auth.auth_fio = reader[1].ToString();
-                Auth.auth_role = Convert.ToInt32(reader[4].ToString());
             }
             reader.Close(); // закрываем reader
             // закрываем соединение с БД
@@ -68,7 +69,7 @@ namespace IS1_20_ZakirovDK
         private void metroButton1_Click(object sender, EventArgs e)
         {
             //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
-            string sql = "SELECT * FROM t_user WHERE loginUser = @un and  passUser= @up";
+            string sql = "SELECT login,password FROM employees WHERE login = @un and  password= @up";
             //Открытие соединения
             conn.Open();
             //Объявляем таблицу
@@ -85,7 +86,7 @@ namespace IS1_20_ZakirovDK
             command.Parameters["@up"].Value = sha256(metroTextBox2.Text);
             //Заносим команду в адаптер
             adapter.SelectCommand = command;
-            //Заполняем таблицу
+            //Заполняем таблицуp77
             adapter.Fill(table);
             //Закрываем соединение
             conn.Close();
