@@ -93,5 +93,10 @@ namespace IS1_20_ZakirovDK
                 ManagerRole(Auth.auth_role);
             }
         }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

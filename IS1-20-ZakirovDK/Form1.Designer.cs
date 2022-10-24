@@ -68,12 +68,13 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(297, 479);
+            this.metroButton3.Location = new System.Drawing.Point(565, 479);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(131, 43);
             this.metroButton3.TabIndex = 3;
             this.metroButton3.Text = "metroButton3";
             this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroLabel2
             // 

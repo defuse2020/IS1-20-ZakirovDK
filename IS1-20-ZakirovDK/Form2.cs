@@ -14,8 +14,8 @@ namespace IS1_20_ZakirovDK
 {
     public partial class Auth2 : MetroForm
     {
-        string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
-        //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+        //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
         //Переменная соединения
         MySqlConnection conn;
         //Логин и пароль к данной форме Вы сможете посмотреть в БД db_test таблице t_user
@@ -51,6 +51,7 @@ namespace IS1_20_ZakirovDK
                 // элементы массива [] - это значения столбцов из запроса SELECT
                 Auth.auth_id = reader[0].ToString();
                 Auth.auth_fio = reader[1].ToString();
+                Auth.auth_role = Convert.ToInt32(reader[5].ToString());
             }
             reader.Close(); // закрываем reader
             // закрываем соединение с БД
