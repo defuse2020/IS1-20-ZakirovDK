@@ -12,7 +12,7 @@ using MetroFramework.Forms;
 
 namespace IS1_20_ZakirovDK
 {
-    public partial class Auth1 : MetroForm
+    public partial class Auth1 : Form
     {
         public Auth1()
         {
@@ -21,7 +21,7 @@ namespace IS1_20_ZakirovDK
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
         public void ManagerRole(int role)
         {
