@@ -108,8 +108,7 @@ namespace IS1_20_ZakirovDK
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            //В текстбокс3 формируется хэш по мере ввода текста во второй текстбокс, используется метод шифрования (хэширования)
-            metroTextBox3.Text = sha256(metroTextBox2.Text);
+            sha256(metroTextBox2.Text);
         }
         private void metroButton2_Click(object sender, EventArgs e)
         {

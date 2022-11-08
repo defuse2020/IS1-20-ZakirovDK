@@ -40,7 +40,7 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 479);
+            this.metroButton1.Location = new System.Drawing.Point(12, 144);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(131, 43);
             this.metroButton1.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(160, 479);
+            this.metroButton2.Location = new System.Drawing.Point(12, 95);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(131, 43);
             this.metroButton2.TabIndex = 2;
@@ -68,11 +68,11 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(565, 479);
+            this.metroButton3.Location = new System.Drawing.Point(12, 490);
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.Size = new System.Drawing.Size(131, 43);
             this.metroButton3.TabIndex = 3;
-            this.metroButton3.Text = "metroButton3";
+            this.metroButton3.Text = "Выход";
             this.metroButton3.UseSelectable = true;
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
@@ -116,7 +116,7 @@ namespace IS1_20_ZakirovDK
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroButton1);
             this.Name = "Auth1";
-            this.Text = "Главная форма";
+            this.Text = "Главное меню";
             this.Load += new System.EventHandler(this.Form1_auth1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
