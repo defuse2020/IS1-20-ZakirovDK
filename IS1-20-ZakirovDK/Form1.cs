@@ -21,7 +21,7 @@ namespace IS1_20_ZakirovDK
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
         public void ManagerRole(int role)
         {
@@ -88,7 +88,7 @@ namespace IS1_20_ZakirovDK
                 this.Show();
                 metroLabel2.Text = "неизвестный пользователь";
                 metroLabel3.Text = "Отсутствует информация о пользователе";
-                metroLabel4.Text = "Тебе сдесь не рады!";
+                metroLabel4.Text = "Тебе pдесь не рады!";
                 metroLabel4.ForeColor = Color.Red;
                 ManagerRole(Auth.auth_role);
             }
