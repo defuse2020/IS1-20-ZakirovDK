@@ -21,7 +21,7 @@ namespace IS1_20_ZakirovDK
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new Form3());
         }
         public void ManagerRole(int role)
         {
@@ -97,6 +97,20 @@ namespace IS1_20_ZakirovDK
         private void metroButton3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

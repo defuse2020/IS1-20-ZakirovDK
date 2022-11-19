@@ -33,6 +33,7 @@ namespace IS1_20_ZakirovDK
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // metroTextBox1
@@ -50,7 +51,7 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox1.CustomButton.UseSelectable = true;
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(23, 106);
+            this.metroTextBox1.Location = new System.Drawing.Point(23, 81);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -67,7 +68,7 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 164);
+            this.metroButton1.Location = new System.Drawing.Point(23, 139);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 1;
@@ -77,7 +78,7 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(120, 164);
+            this.metroButton2.Location = new System.Drawing.Point(120, 139);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 2;
@@ -100,7 +101,7 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(23, 135);
+            this.metroTextBox2.Location = new System.Drawing.Point(23, 110);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
@@ -115,11 +116,22 @@ namespace IS1_20_ZakirovDK
             this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(401, 37);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Авторизация пользователя";
+            // 
             // Auth2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 199);
+            this.ClientSize = new System.Drawing.Size(727, 545);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
@@ -128,6 +140,7 @@ namespace IS1_20_ZakirovDK
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,5 +150,6 @@ namespace IS1_20_ZakirovDK
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
