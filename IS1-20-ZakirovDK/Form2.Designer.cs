@@ -136,6 +136,7 @@ namespace IS1_20_ZakirovDK
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroTextBox1);
+            this.MinimumSize = new System.Drawing.Size(743, 584);
             this.Name = "Auth2";
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form2_Load);

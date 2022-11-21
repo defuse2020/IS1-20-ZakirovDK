@@ -29,8 +29,8 @@ namespace IS1_20_ZakirovDK
         /// </summary>
         private void InitializeComponent()
         {
+            MetroFramework.Controls.MetroButton metroButton1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth1));
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
@@ -42,19 +42,21 @@ namespace IS1_20_ZakirovDK
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroButton1
             // 
-            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton1.Location = new System.Drawing.Point(12, 144);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(131, 43);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "metroButton1";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            metroButton1.Location = new System.Drawing.Point(12, 144);
+            metroButton1.Name = "metroButton1";
+            metroButton1.Size = new System.Drawing.Size(131, 43);
+            metroButton1.TabIndex = 0;
+            metroButton1.TabStop = false;
+            metroButton1.Text = "Клиенты";
+            metroButton1.UseSelectable = true;
+            metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel1
             // 
@@ -77,6 +79,7 @@ namespace IS1_20_ZakirovDK
             // 
             // metroButton3
             // 
+            this.metroButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroButton3.BackColor = System.Drawing.SystemColors.Control;
             this.metroButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroButton3.Location = new System.Drawing.Point(12, 490);
@@ -116,11 +119,12 @@ namespace IS1_20_ZakirovDK
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(149, 9);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(281, 9);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(566, 76);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(434, 76);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 8;
             this.guna2PictureBox1.TabStop = false;
@@ -157,6 +161,9 @@ namespace IS1_20_ZakirovDK
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Location = new System.Drawing.Point(149, 144);
             this.panel1.Name = "panel1";
@@ -180,9 +187,10 @@ namespace IS1_20_ZakirovDK
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(metroButton1);
+            this.MinimumSize = new System.Drawing.Size(743, 584);
             this.Name = "Auth1";
-            this.Text = "Главное меню";
+            this.Text = "Меню";
             this.Load += new System.EventHandler(this.Form1_auth1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -191,8 +199,6 @@ namespace IS1_20_ZakirovDK
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton3;
