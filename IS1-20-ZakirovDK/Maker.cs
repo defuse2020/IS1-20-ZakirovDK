@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace IS1_20_ZakirovDK
 {
-    public partial class Form3 : Form
+    public partial class Maker : Form
     {
         //Переменная соединения
         MySqlConnection conn;
@@ -74,7 +74,7 @@ namespace IS1_20_ZakirovDK
         public void GetListUsers()
         {
             //Запрос для вывода строк в БД
-            string commandStr = "SELECT * FROM client";
+            string commandStr = "SELECT * FROM maker";
             //Открываем соединение
             conn.Open();
             //Объявляем команду, которая выполнить запрос в соединении conn
@@ -90,24 +90,15 @@ namespace IS1_20_ZakirovDK
             //Отражаем количество записей в ДатаГриде
             int count_rows = dataGridView1.RowCount - 1;
         }
-        public Form3()
+        public Maker()
         {
             InitializeComponent();
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Maker_Load(object sender, EventArgs e)
         {
-            reload_list();
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
-            string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+            string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+            //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
             // создаём объект для подключения к БД
             conn = new MySqlConnection(connStr);
             //Вызываем метод для заполнение дата Грида
@@ -129,6 +120,16 @@ namespace IS1_20_ZakirovDK
             dataGridView1.RowHeadersVisible = false;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            reload_list();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

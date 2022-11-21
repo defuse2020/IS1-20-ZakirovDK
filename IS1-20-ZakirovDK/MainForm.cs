@@ -21,7 +21,7 @@ namespace IS1_20_ZakirovDK
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form3());
+            openChildForm(new Clients());
         }
         public void ManagerRole(int role)
         {
@@ -111,6 +111,21 @@ namespace IS1_20_ZakirovDK
             panel1.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Maker());
+        }
+
+        private void metroButton7_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Provider());
+        }
+
+        private void metroButton8_Click(object sender, EventArgs e)
+        {
+            openChildForm(new MainTable());
         }
     }
 }

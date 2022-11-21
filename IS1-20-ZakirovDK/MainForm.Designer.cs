@@ -29,8 +29,8 @@ namespace IS1_20_ZakirovDK
         /// </summary>
         private void InitializeComponent()
         {
-            MetroFramework.Controls.MetroButton metroButton1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth1));
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
@@ -42,21 +42,23 @@ namespace IS1_20_ZakirovDK
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton7 = new MetroFramework.Controls.MetroButton();
+            this.metroButton8 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroButton1
             // 
-            metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            metroButton1.Location = new System.Drawing.Point(12, 144);
-            metroButton1.Name = "metroButton1";
-            metroButton1.Size = new System.Drawing.Size(131, 43);
-            metroButton1.TabIndex = 0;
-            metroButton1.TabStop = false;
-            metroButton1.Text = "Клиенты";
-            metroButton1.UseSelectable = true;
-            metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton1.Location = new System.Drawing.Point(12, 193);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(131, 43);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.TabStop = false;
+            this.metroButton1.Text = "Клиенты";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel1
             // 
@@ -70,12 +72,13 @@ namespace IS1_20_ZakirovDK
             // metroButton2
             // 
             this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton2.Location = new System.Drawing.Point(12, 193);
+            this.metroButton2.Location = new System.Drawing.Point(12, 242);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(131, 43);
             this.metroButton2.TabIndex = 2;
-            this.metroButton2.Text = "metroButton2";
+            this.metroButton2.Text = "Производители";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // metroButton3
             // 
@@ -170,12 +173,38 @@ namespace IS1_20_ZakirovDK
             this.panel1.Size = new System.Drawing.Size(566, 389);
             this.panel1.TabIndex = 12;
             // 
+            // metroButton7
+            // 
+            this.metroButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton7.Location = new System.Drawing.Point(12, 291);
+            this.metroButton7.Name = "metroButton7";
+            this.metroButton7.Size = new System.Drawing.Size(131, 43);
+            this.metroButton7.TabIndex = 13;
+            this.metroButton7.Text = "Поставщики";
+            this.metroButton7.UseSelectable = true;
+            this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click);
+            // 
+            // metroButton8
+            // 
+            this.metroButton8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.metroButton8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton8.Location = new System.Drawing.Point(12, 144);
+            this.metroButton8.Name = "metroButton8";
+            this.metroButton8.Size = new System.Drawing.Size(131, 43);
+            this.metroButton8.TabIndex = 14;
+            this.metroButton8.TabStop = false;
+            this.metroButton8.Text = "Главная таблица";
+            this.metroButton8.UseSelectable = true;
+            this.metroButton8.Click += new System.EventHandler(this.metroButton8_Click);
+            // 
             // Auth1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(727, 545);
+            this.Controls.Add(this.metroButton8);
+            this.Controls.Add(this.metroButton7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroButton6);
             this.Controls.Add(this.metroButton5);
@@ -187,7 +216,7 @@ namespace IS1_20_ZakirovDK
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(metroButton1);
+            this.Controls.Add(this.metroButton1);
             this.MinimumSize = new System.Drawing.Size(743, 584);
             this.Name = "Auth1";
             this.Text = "Меню";
@@ -210,6 +239,9 @@ namespace IS1_20_ZakirovDK
         private MetroFramework.Controls.MetroButton metroButton5;
         private MetroFramework.Controls.MetroButton metroButton6;
         private System.Windows.Forms.Panel panel1;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton7;
+        private MetroFramework.Controls.MetroButton metroButton8;
     }
 }
 
