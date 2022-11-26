@@ -56,7 +56,9 @@ namespace IS1_20_ZakirovDK
                     metroLabel1.ForeColor = Color.Red;
                     metroButton1.Enabled = false;
                     metroButton2.Enabled = false;
-                    metroButton3.Enabled = false;
+                    metroButton3.Enabled = true;
+                    metroButton7.Enabled = false;
+                    metroButton8.Enabled = false;
                     break;
             }
         }

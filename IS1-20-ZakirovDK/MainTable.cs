@@ -97,8 +97,8 @@ namespace IS1_20_ZakirovDK
 
         private void MainTable_Load(object sender, EventArgs e)
         {
-            //string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
-            string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+            string connStr = "server=10.90.12.110;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
+            //string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_14;database=is_1_20_st14_KURS;password=45850148;";
             // создаём объект для подключения к БД
             conn = new MySqlConnection(connStr);
         }
@@ -117,28 +117,6 @@ namespace IS1_20_ZakirovDK
         {
             //Вызываем метод для заполнение дата Грида
             GetListUsers();
-            //Ширина полей
-            dataGridView1.Columns[0].FillWeight = 15;
-            dataGridView1.Columns[1].FillWeight = 15;
-            dataGridView1.Columns[2].FillWeight = 15;
-            dataGridView1.Columns[3].FillWeight = 15;
-            dataGridView1.Columns[4].FillWeight = 15;
-            dataGridView1.Columns[5].FillWeight = 25;
-            dataGridView1.Columns[6].FillWeight = 40;
-            dataGridView1.Columns[7].FillWeight = 40;
-            dataGridView1.Columns[8].FillWeight = 15;
-            dataGridView1.Columns[9].FillWeight = 15;
-            //Режим для полей "Только для чтения"
-            dataGridView1.Columns[0].ReadOnly = true;
-            dataGridView1.Columns[1].ReadOnly = true;
-            dataGridView1.Columns[2].ReadOnly = true;
-            dataGridView1.Columns[3].ReadOnly = true;
-            dataGridView1.Columns[4].ReadOnly = true;
-            dataGridView1.Columns[5].ReadOnly = true;
-            dataGridView1.Columns[6].ReadOnly = true;
-            dataGridView1.Columns[7].ReadOnly = true;
-            dataGridView1.Columns[8].ReadOnly = true;
-            dataGridView1.Columns[9].ReadOnly = true;
             //Растягивание полей грида
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
